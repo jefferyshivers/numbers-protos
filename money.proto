@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package awesomelabs.numbers;
+
+service MoneyService {
+  rpc Convert(ConvertMoneyRequest) returns (Money);
+}
+
+enum Currency {
+  USD = 0;
+  EUR = 1;
+  CAD = 2;
+  MXN = 3;
+}
+
+message Money {
+  Currency currency = 1;
+  double units = 2;
+}
+
+message ConvertMoneyRequest {
+  Money original = 1;
+  Currency target_currency = 2;
+}
