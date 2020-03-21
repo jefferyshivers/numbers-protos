@@ -6,7 +6,7 @@ You can import this project into another project using [`protop`](https://protop
 
 ## Local link
 If you pull this project locally and run `protop link`, then it will be available to import into another project:
-```json
+```bash
 {
   // ...
   "dependencies": {
@@ -18,7 +18,7 @@ Run `protop sync --use-links` in the other project to import this dependency.
 
 ## From Github
 You can simply add the git URL to your manifest to import dependencies from Github, Gitlab, Bitbucket, etc:
-```json
+```bash
 {
   // ...
   "dependencies": {
